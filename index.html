@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>daisyUI-biker-project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              sunset: "#E76F51",
+              "sunset-bg": "#E76F5110",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="p-2">
+    <!--header section-->
+    <header class="font-poppins md:container mx-auto">
+      <nav>
+        <div class="navbar bg-base-100 shadow-sm">
+          <div class="flex-1">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Home</a></li>
+                <li><a>News</a></li>
+                <li><a>Contact</a></li>
+                <li><a>Shop</a></li>
+              </ul>
+            </div>
+            <a class="font-bold text-xl md:text-3xl">Bike Zone</a>
+          </div>
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>News</a></li>
+              <li><a>Contact</a></li>
+              <li><a>Shop</a></li>
+            </ul>
+          </div>
+          <div class="md:w-auto">
+            <a class="btn bg-sunset">login</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="carousel w-full bg-sunset-bg">
+        <div
+          id="slide1"
+          class="carousel-item relative w-full md:h-screen flex flex-col lg:flex-row md:p-26 place-items-center gap-5"
+        >
+          <div class="md:flex-1">
+            <h1 class="text-5xl md:text-6xl font-bold text-black m-4">
+              Ride-on R15 V4 with Smile
+            </h1>
+            <p class="font-light text-[#00000080] text-base">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+            <button class="btn bg-sunset px-4 py-6 mt-7">Purchase</button>
+          </div>
+          <div class="md:flex-1">
+            <img src="./images/slider/bike1.png" class="w-full" />
+          </div>
+          <div
+            class="absolute left-0 md:left-6 right-0 md:right-6 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+
+        <div
+          id="slide2"
+          class="carousel-item relative w-full md:h-screen flex flex-col lg:flex-row md:p-26 place-items-center gap-5"
+        >
+          <div class="md:flex-1">
+            <h1 class="text-5xl md:text-6xl font-bold text-black m-4">
+              Ride-on R15 V4 with Smile
+            </h1>
+            <p class="font-light text-[#00000080] text-base">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+            <button class="btn bg-sunset px-4 py-6 mt-7">Purchase</button>
+          </div>
+          <div class="md:flex-1">
+            <img src="./images/slider/bike2.png" class="w-full" />
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+
+        <div
+          id="slide3"
+          class="carousel-item relative w-full md:h-screen flex flex-col lg:flex-row md:p-26 place-items-center gap-5"
+        >
+          <div class="md:flex-1">
+            <h1 class="text-5xl md:text-6xl font-bold text-black m-4">
+              Ride-on R15 V4 with Smile
+            </h1>
+            <p class="font-light text-[#00000080] text-base">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+            <button class="btn bg-sunset px-4 py-6 mt-7">Purchase</button>
+          </div>
+          <div class="md:flex-1">
+            <img src="./images/slider/bike3.png" class="w-full" />
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div
+          id="slide4"
+          class="carousel-item relative w-full md:h-screen flex flex-col lg:flex-row md:p-26 place-items-center gap-5"
+        >
+          <div class="md:flex-1">
+            <h1 class="text-5xl md:text-6xl font-bold text-black m-4">
+              Ride-on R15 V4 with Smile
+            </h1>
+            <p class="font-light text-[#00000080] text-base">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+            <button class="btn bg-sunset px-4 py-6 mt-7">Purchase</button>
+          </div>
+          <div class="md:flex-1">
+            <img src="./images/slider/bike4.png" class="w-full" />
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--main section-->
+    <main class="md:container mx-auto md:mt-40 mt-20">
+      <!--Fetured Bikes In This Year-->
+
+      <div>
+        <div class="text-center mb-12">
+          <h4
+            class="text-4xl md:text-5xl font-semibold text-black font-poppins"
+          >
+            Fetured Bikes In This Year
+          </h4>
+          <p class="text-sm text-sunset font-semibold font-poppins">
+            Best bike collection
+          </p>
+          <hr class="border-2 border-sunset w-14 mx-auto" />
+        </div>
+        <div class="flex flex-col lg:flex-row gap-36 justify-center">
+          <img src="./images/others/feature-bike.png" alt="" />
+          <img src="./images/others/feature-bike.png" alt="" />
+          <img src="./images/others/feature-bike.png" alt="" />
+        </div>
+      </div>
+      <!--latest News-->
+      <div class="mt-32 border md:w-[1171px] mx-auto md:px-14 lg:mb-32 mb-16">
+        <div class="text-center">
+          <h3 class="md:text-5xl text-4xl font-semibold font-poppins">
+            latest News
+          </h3>
+        </div>
+        <!--latest News card-->
+        <div class="flex flex-col lg:flex-row gap-5 mt-12">
+          <div class="p-5 bg-white shadow-xl">
+            <figure class="mb-10">
+              <img src="./images/others/latest1.png" alt="bike" />
+            </figure>
+            <div>
+              <h2 class="font-semibold font-poppins text-[#18191F] mb-2">
+                Ducati XDIAVEL S-73
+              </h2>
+              <p class="text-base text-[#6C6C6C]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <button class="btn bg-sunset px-4 py-6 mt-7">Read More</button>
+            </div>
+          </div>
+          <div class="p-5 bg-white shadow-xl">
+            <figure class="mb-10">
+              <img src="./images/others/latest2.png" alt="bike" />
+            </figure>
+            <div>
+              <h2 class="font-semibold font-poppins text-[#18191F] mb-2">
+                Ducati XDIAVEL S-73
+              </h2>
+              <p class="text-base text-[#6C6C6C]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <button class="btn border-sunset text-sunset border p-5 mt-7">
+                Read More
+              </button>
+            </div>
+          </div>
+          <div class="p-5 bg-white shadow-xl">
+            <figure class="mb-10">
+              <img src="./images/others/latest1.png" alt="bike" />
+            </figure>
+            <div>
+              <h2 class="font-semibold font-poppins text-[#18191F] mb-2">
+                Ducati XDIAVEL S-73
+              </h2>
+              <p class="text-base text-[#6C6C6C]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <button class="btn border-sunset text-sunset border p-5 mt-7">
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Happy Clients says-->
+      <div class="md:w-[1054px] mx-auto text-center">
+        <div class="mb-12">
+          <h1 class="md:text-5xl text-4xl font-semibold font-poppins">
+            Happy <span class="text-sunset">Clients says</span>
+          </h1>
+        </div>
+        <!--Happy Clients says card-->
+
+        <div class="flex flex-col md:flex-row gap-11">
+          <div class="shadow-md px-9 py-10">
+            <div class="avatar mb-8">
+              <div class="w-[149px] rounded-full">
+                <img src="./images/others/user-1.png" />
+              </div>
+            </div>
+            <div>
+              <p class="text-[#6C6C6C] text-sm font-poppins">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4 mt-4">
+              <div class="rating mx-auto">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="1 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="2 star"
+                  checked="checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="3 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="4 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="5 star"
+                />
+              </div>
+              <div>
+                <a
+                  class="text-sm font-semibold text-[#23A6F0] font-poppins"
+                  href=""
+                  >Regina Miles</a
+                >
+              </div>
+              <div class="font-poppins text-sm font-semibold text-[#252B42]">
+                <h5>Banker</h5>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-md px-9 py-10">
+            <div class="avatar mb-8">
+              <div class="w-[149px] rounded-full">
+                <img src="./images/others/user-1.png" />
+              </div>
+            </div>
+            <div>
+              <p class="text-[#6C6C6C] text-sm font-poppins">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 mt-4">
+              <div class="rating mx-auto">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="1 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="2 star"
+                  checked="checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="3 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="4 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="5 star"
+                />
+              </div>
+              <div>
+                <a
+                  class="text-sm font-semibold text-[#23A6F0] font-poppins"
+                  href=""
+                  >Regina Miles</a
+                >
+              </div>
+              <div class="font-poppins text-sm font-semibold text-[#252B42]">
+                <h5>Banker</h5>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-md px-9 py-10">
+            <div class="avatar mb-8">
+              <div class="w-[149px] rounded-full">
+                <img src="./images/others/user-1.png" />
+              </div>
+            </div>
+            <div>
+              <p class="text-[#6C6C6C] text-sm font-poppins">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 mt-4">
+              <div class="rating mx-auto">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="1 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="2 star"
+                  checked="checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="3 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="4 star"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  aria-label="5 star"
+                />
+              </div>
+              <div>
+                <a
+                  class="text-sm font-semibold text-[#23A6F0] font-poppins"
+                  href=""
+                  >Regina Miles</a
+                >
+              </div>
+              <div class="font-poppins text-sm font-semibold text-[#252B42]">
+                <h5>Banker</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--footer section-->
+    <footer></footer>
+  </body>
+</html>
